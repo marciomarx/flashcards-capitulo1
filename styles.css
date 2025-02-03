@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Tela de abertura */
+.welcome-screen {
+  display: block;
+}
+
+.welcome-screen h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.welcome-screen .author {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.welcome-screen button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.welcome-screen button:hover {
+  background-color: #0056b3;
+}
+
+/* Tela dos flashcards */
+.flashcard-screen {
+  display: none; /* Inicia oculta */
+  flex-direction: column;
+  align-items: center;
+}
+
+.flashcard-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.flashcard {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard .front,
+.flashcard .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.flashcard .back {
+  background: #e0e0e0;
+  transform: rotateY(180deg);
+}
+
+/* Controles de navegação */
+.controls {
+  margin-top: 1cm;  /* Espaço de 1 cm entre os flashcards e os botões */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background: #0056b3;
+}

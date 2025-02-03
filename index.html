@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards - Capítulo 1 Guyton</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Tela de abertura -->
+    <div class="welcome-screen" id="welcomeScreen">
+      <h1>Flashcards - Capítulo 1 Guyton</h1>
+      <p class="author">Professor Márcio Marques de Oliveira</p>
+      <button id="startButton">Iniciar</button>
+    </div>
+
+    <!-- Tela dos flashcards (inicialmente oculta) -->
+    <div class="flashcard-screen" id="flashcardScreen">
+      <div class="flashcard-container">
+        <div class="flashcard" id="flashcard">
+          <div class="front">
+            <p id="question">Clique em "Iniciar" para começar.</p>
+          </div>
+          <div class="back">
+            <p id="answer"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles de navegação -->
+      <div class="controls">
+        <button id="prevButton">← Anterior</button>
+        <button id="resetButton">Início</button>
+        <button id="nextButton">Próximo →</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
